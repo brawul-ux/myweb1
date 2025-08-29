@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+ }
+
+ header {
+    background: #1e1e1e;
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid #ff5722;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #ff5722
+ }
+
+ .banner {
+    margin: 20px auto;
+    max-width: 900px;
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    color: #eee;
+    box-sizing: border-box;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #333;
+  }
+
+ .banner:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.6);
+}
+
+ .banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.3);
+    transition: box-shadow 0.2s;
+}
+ .banner img:hover {
+    box-shadow: 0 4px 24px 0 #767575a0;
+}
+
+ .brand-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+ .brand-logo {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #ff5722 0%, #ff9800 100%);
+    color: #fff;
+    font-family: 'Bungee', Arial, sans-serif;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 2px 8px 0 #ff572250;
+    letter-spacing: 1px;
+}
+
+ .brand-logo-img {
+    width: 180px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+/* Responsive adjustment for header and logo */
+@media (max-width: 600px) {
+    header, .brand-header {
+        min-height: 72px;
+    }
+    .brand-logo-img {
+        width: 120px;
+        height: 48px;
+    }
+ }
+
+ .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+ }
+
+ .card {
+    background:
+      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='40' x2='40' y2='0' stroke='%23ffffff' stroke-width='1' opacity='0.04'/%3E%3C/svg%3E")
+      repeat,
+      linear-gradient(135deg, #232526 0%, #2b2b2b 100%);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.5);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #333;
+    position: relative;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px 0 #ff5722a0;
+    border-color: #ff5722;
+}
+
+ .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    transition: filter 0.2s;
+}
+.card:hover img {
+    filter: brightness(1.1) saturate(1.2);
+ }
+
+ .card h3 {
+    margin: 18px 0 12px;
+    font-size: 18px;
+    color: #f5f5f5;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    background: rgba(28, 26, 24, 0.82);
+    padding: 7px 18px 7px 18px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.10);
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.card:hover h3 {
+    background: rgba(34, 34, 40, 0.95);
+    color: #ff9800;
+    box-shadow: 0 4px 16px 0 #ff980040;
+}
+
+ .card a {
+    display: inline-block;
+    margin: 12px 0 20px;
+    padding: 9px 28px;
+    background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px 0 #ff572230;
+    border: none;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.card a:hover {
+    background: linear-gradient(90deg, #ff9800 0%, #ff5722 100%);
+    box-shadow: 0 6px 24px 0 #ff980080;
+    color: #fff;
+    transform: scale(1.06);
+}
+
+ .card-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 18px 6px 16px;
+    border-top-left-radius: 14px;
+    border-bottom-right-radius: 18px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
+    box-shadow: 0 2px 8px 0 #ff572250;
+    z-index: 2;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    /* text-shadow: 0 1px 4px rgba(13, 13, 13, 0.667); */
+    border: 1px solid #ff9800;
+    border-width: 0 0 1px 1px;
+    user-select: none;
+    pointer-events: none;
+    transition: background 0.2s, border 0.2s;
+}
+.card-label.lokal {
+    background: linear-gradient(90deg, #00c853 0%, #00bfae 100%);
+    border-color: #00bfae;
+}
+.card-label.barat {
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+    border-color: #dd2476;
+}
+.card-label.japan {
+    background: linear-gradient(90deg, #396afc 0%, #2948ff 100%);
+    border-color: #2948ff;
+}
+
+/* Responsive adjustment for label */
+@media (max-width: 600px) {
+    .card-label {
+        font-size: 11px;
+        padding: 3px 10px;
+        top: 0;
+        left: 0;
+    }
+ }
+
+ @media (max-width: 600px) {
+    .banner {
+        padding: 20px 10px;
+        font-size: 16px;
+    }
+    .card img {
+        height: 120px;
+    }
+    .card h3 {
+        font-size: 17px;
+    }
+ }
+
+  footer {
+    background: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #ff5722;
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  footer a {
+    color: #ff5722;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }

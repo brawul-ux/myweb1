@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Galery HD untuk pertanyaan, saran, atau kerjasama. Kami siap membantu Anda terkait layanan dan informasi film HD.">
+    <meta name="keywords" content="Galery HD, Contact, Hubungi, Email, Support">
+    <meta name="author" content="Galery HD">
+    <meta name="robots" content="index, follow">
+
+    <!-- Title -->
+    <title>Contact | Galery HD</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://galeryhd.com/contact">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-logo2.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon-logo2.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-logo2.webp">
+
+    <!-- Theme Color (for mobile browser) -->
+    <meta name="theme-color" content="#181a20">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | Galery HD">
+    <meta property="og:description" content="Hubungi Galery HD untuk pertanyaan, saran, atau kerjasama. Kami siap membantu Anda terkait layanan dan informasi film HD.">
+    <meta property="og:url" content="https://galeryhd.com/contact">
+    <meta property="og:image" content="https://galeryhd.com/assets/images/logo/header-logo2.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Galery HD">
+    <meta name="twitter:description" content="Hubungi Galery HD untuk pertanyaan, saran, atau kerjasama. Kami siap membantu Anda terkait layanan dan informasi film HD.">
+    <meta name="twitter:image" content="https://galeryhd.com/assets/images/logo/header-logo2.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Popup Contact Styling */
+        .popup-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(20,20,20,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .popup-contact {
+            background: linear-gradient(135deg, #232526 0%, #2b2b2b 100%);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 #000a;
+            padding: 36px 28px 28px 28px;
+            max-width: 350px;
+            width: 90vw;
+            color: #eee;
+            text-align: center;
+            position: relative;
+            border: 1.5px solid #ff5722;
+            animation: popupIn 0.3s;
+        }
+        @keyframes popupIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to   { transform: scale(1); opacity: 1; }
+        }
+        .close-btn {
+            position: absolute;
+            top: 12px; right: 16px;
+            background: none;
+            border: none;
+            color: #ff5722;
+            font-size: 28px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .close-btn:hover {
+            color: #fff;
+        }
+        .contact-email {
+            display: inline-block;
+            margin: 16px 0 18px 0; 
+            padding: 8px 18px;
+            background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px 0 #ff572250;
+            transition: background 0.2s;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-contact">
+            <button class="close-btn" id="closePopup">&times;</button>
+            <h2>Contact Us</h2>
+            <p>For any inquiries, suggestions, or partnership opportunities, please contact us via email:</p>
+            <a href="mailto:brandhub@email.com" class="contact-email">brandhub@email.com</a>
+            <hr style="margin: 24px 0 0 0;">
+            <p style="font-size:13px;color:#aaa;margin-top:18px;">
+                We will respond to your message as soon as possible.<br>
+                Thank you for your attention!
+            </p>
+        </div>
+    </div>
+    <script>
+        // Show popup on page load
+        window.onload = function() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+        };
+        // Close popup
+        document.getElementById('closePopup').onclick = function() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            window.location.href = "index.html"; // Redirect to home after close
+        };
+        // Optional: close popup when clicking outside the box
+        document.getElementById('popupOverlay').onclick = function(e) {
+            if(e.target === this) {
+                this.style.display = 'none';
+                window.location.href = "index.html";
+            }
+        };
+    </script>
+</body>
+</html>
